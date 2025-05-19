@@ -5,9 +5,9 @@ metadata:
 spec:
   tls:
     - hosts:
-        - KEYCLOAK_HOST
+        - $KEYCLOAK_HOST
   rules:
-    - host: KEYCLOAK_HOST
+    - host: $KEYCLOAK_HOST
       http:
         paths:
           - path: /
