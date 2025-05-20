@@ -102,9 +102,11 @@ spec:
             - name: http
               containerPort: 8080
           startupProbe:
+            failureThreshold: 30
             httpGet:
               path: /health/started
               port: 9000
+            initialDelaySeconds: 60
           readinessProbe:
             httpGet:
               path: /health/ready
