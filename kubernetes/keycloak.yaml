@@ -55,10 +55,7 @@ spec:
           args: ["start"]
           env:
             - name: KC_BOOTSTRAP_ADMIN_USERNAME
-              valuefrom:
-                secretKeyRef:
-                  name: admin-creds
-                  key: username
+              value: "admin"
             - name: KC_BOOTSTRAP_ADMIN_PASSWORD
               value: "admin"
             # In a production environment, add a TLS certificate to Keycloak to either end-to-end encrypt the traffic between
